@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+
+  --font-sans: "Noto Sans JP", sans-serif;
+  
+  --color-main: #3F3C3C; /* Text/Main */
+  --color-sub: #757575;  /* Text/Sub */
+  --color-link: #0088FF; /* Text/Link */
+  --color-page: #F5F5F5; /* Bg/Page */
+  --color-card: #FFFFFF; /* Bg/Card */
+  --color-line: #B3B3B3; /* Border/Line */
+}
+
+@utility text-body {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 400; /* Regular */
+  color: var(--color-main);
+}
+
+@utility text-section-title {
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 900; /* Black */
+  color: var(--color-sub);
+}
+
+@utility text-caption {
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 400; /* Regular */
+  color: var(--color-main);
+}
+
+@utility text-detail {
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  color: var(--color-main);
+}

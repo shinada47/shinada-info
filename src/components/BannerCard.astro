@@ -1,0 +1,16 @@
+---
+// src/components/BannerCard.astro
+const { url, description, image } = Astro.props;
+---
+
+<a href={url} target="_blank" rel="noopener noreferrer" class="group block w-full">
+  {/* 画像部分：角丸のみ適用 */}
+  <div class="w-full overflow-hidden rounded-lg">
+    <img src={image} alt="" class="w-full h-auto object-cover transition-opacity duration-200 group-hover:opacity-80" />
+  </div>
+
+  {/* キャプション部分：画像の下に直接配置 */}
+  <p class="text-caption mt-2 text-left">
+    {description}
+  </p>
+</a>

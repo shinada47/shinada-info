@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LinkCard from '../components/LinkCard.astro';
+import BannerCard from '../components/BannerCard.astro';
+
+// SNS
+const snsLinks = [
+  {
+    title: "X",
+    url: "https://x.com/shinada47",
+    description: "プライベート多め",
+    icon: "/icons/x.png"
+  },
+  {
+    title: "bluesky",
+    url: "https://bsky.app/profile/shinada47.bsky.social",
+    description: "使いたい気持ちはある",
+    icon: "/icons/bluesky.png"
+  },
+  {
+    title: "Mixi2",
+    url: "https://mixi.social/@shinada47",
+    description: "進捗とか",
+    icon: "/icons/mixi2.png"
+  }
+];
+
+// まとめ
+const links = [
+  {
+    title: "Xfolio",
+    url: "https://xfolio.jp/portfolio/shinada47",
+    description: "一次創作の絵や漫画まとめ",
+    icon: "/icons/xfolio.png"
+  },
+  {
+    title: "posfie",
+    url: "https://posfie.com/@shinada47",
+    description: "X上の二次創作の絵や漫画まとめ",
+    icon: "/icons/posfie.png"
+  },
+  {
+    title: "pixiv",
+    url: "https://pixiv.net/users/40123763",
+    description: "二次創作の絵や漫画まとめ",
+    icon: "/icons/pixiv.png"
+  }
+];
+
+// ツール
+const tools = [
+  {
+    url: "https://47ts.xxxx.jp/",
+    description: "【二次創作】47ts非公式対戦ジェネレーター",
+    image: "/banner/47ts.png"
+  }
+];
+
+---
+<Layout>
+  <header class="pt-3 pl-3 pb-5">
+    <h1 class="text-body text-main">
+      shinada.info
+    </h1>
+  </header>
+
+  <main class="max-w-[480px] w-[90%] mx-auto text-center">
+  
+  {/* プロフィール */}
+    <div class="mb-16">
+      <img src="/icons/icon.jpg" alt="シナダ" class="w-28 h-28 rounded-full mx-auto mb-4 border border-line" />
+      <p class="text-body">シナダ</p>
+      <p class="text-body text-sub mt-10">
+        成人済み。雑多オタク。
+      </p>
+    </div>
+
+  {/* SNS */}
+    <section class="mb-16">
+      <h2 class="text-section-title mb-6">SNS</h2>
+      <div class="flex flex-col gap-4">
+        {snsLinks.map((item) => <LinkCard {...item} />)}
+      </div>
+    </section>
+
+  {/* まとめ */}
+    <section class="mb-16">
+      <h2 class="text-section-title mb-6">まとめ</h2>
+      <div class="flex flex-col gap-4">
+        {links.map((item) => <LinkCard {...item} />)}
+      </div>
+    </section>
+
+  {/* ツール */}
+    <section class="mt-16">
+      <h2 class="text-section-title mb-6">ツール</h2>
+      <div class="flex flex-col gap-4">
+        {tools.map((item) => <BannerCard {...item} />)}
+      </div>
+    </section>
+
+    <footer class="pt-20 pb-5 text-caption text-sub">
+      © 2026 シナダ
+    </footer>
+  </main>
+</Layout>
