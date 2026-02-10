@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import LinkCard from '../components/LinkCard.astro';
 import BannerCard from '../components/BannerCard.astro';
+import ShareButton from '../components/ShareButton.astro';
 
 // SNS
 const snsLinks = [
@@ -58,10 +59,11 @@ const tools = [
 
 ---
 <Layout>
-  <header class="pt-3 pl-3 pb-5">
+  <header class="pt-3 pl-3 pb-5 pr-3 flex justify-between items-center">
     <h1 class="text-body text-main">
       shinada.info
     </h1>
+    <ShareButton />
   </header>
 
   <main class="max-w-[480px] w-[90%] mx-auto text-center">
@@ -70,7 +72,7 @@ const tools = [
     <div class="mb-16">
       <img src="/icons/icon.jpg" alt="シナダ" class="w-28 h-28 rounded-full mx-auto mb-4 border border-line" />
       <p class="text-body">シナダ</p>
-      <p class="text-body text-sub mt-10">
+      <p class="text-caption text-sub mt-2">
         成人済み。雑多オタク。
       </p>
     </div>
